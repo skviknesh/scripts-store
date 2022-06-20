@@ -82,3 +82,8 @@ print(myNumber2)
 
 myNumber ="helloworld"
 print(myNumber)
+
+num, num2, num7 = 1, 4, 5
+print(num, num2, num7)
+num = 5; num2 = 4; num7 = 7
+print(num, num2, num7)
