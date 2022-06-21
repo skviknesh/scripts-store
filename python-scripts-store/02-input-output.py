@@ -128,3 +128,29 @@ print("Number of list is: ", x)
 # taking multiple inputs at a time separated by comma
 x = [int(x) for x in input("Enter multiple value: ").split(",")]
 print("Number of list is: ", x)
+
+
+# Python Output functions
+# Syntax: print(value(s), sep= ‘ ‘, end = ‘\n’, file = file, flush = flush)
+print("GeeksforGeeks \n is best for DSA Content.")
+
+
+# This line will automatically add a new line before the next print statement
+print ("GeeksForGeeks is the best platform for DSA content")
+
+
+# This print() function ends with "**" as set in the end argument.
+print ("GeeksForGeeks is the best platform for DSA content", end= "**")
+print("Welcome to GFG")
+
+
+# Print 3>>2>>1>>Start:
+import time
+
+count_seconds = 3
+for i in reversed(range(count_seconds + 1)):
+    if i > 0:
+        print(i, end='>>>')
+        time.sleep(1)
+    else:
+    print('Start')
