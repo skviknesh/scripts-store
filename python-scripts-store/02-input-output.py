@@ -1,6 +1,6 @@
 # Input & Output
 
-
+# INPUT
 # Getting inputs from user: input() function
 val = input("Enter your value: ")
 print(val)
@@ -130,6 +130,7 @@ x = [int(x) for x in input("Enter multiple value: ").split(",")]
 print("Number of list is: ", x)
 
 
+# OUTPUT:
 # Python Output functions
 # Syntax: print(value(s), sep= ‘ ‘, end = ‘\n’, file = file, flush = flush)
 print("GeeksforGeeks \n is best for DSA Content.")
@@ -144,13 +145,27 @@ print ("GeeksForGeeks is the best platform for DSA content", end= "**")
 print("Welcome to GFG")
 
 
+# Variable outputs:
+b = "Viknesh"
+print("Hello", b, "How are you")
+
+
 # Print 3>>2>>1>>Start:
 import time
-
 count_seconds = 3
 for i in reversed(range(count_seconds + 1)):
     if i > 0:
         print(i, end='>>>')
         time.sleep(1)
     else:
-    print('Start')
+        print('Start')
+
+
+import time
+count_seconds = 3
+for i in reversed(range(count_seconds + 1)):
+    if i > 0:
+        print(i, end='>>>', flush = True)
+        time.sleep(1)
+    else:
+        print('Start')
