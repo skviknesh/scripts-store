@@ -93,8 +93,9 @@ print("Number of girls is : ", z)
 
 
 # Taking two inputs at a time
-a, b = input("Enter two values: ").split()
+a, b = input("Enter two numbers: ").split()
 print("First number is {} and second number is {}".format(a, b))
+print(f"First number is {a} and second number is {b}")
 
 
 # Taking multiple inputs at a time and type casting using list() function
@@ -169,3 +170,43 @@ for i in reversed(range(count_seconds + 1)):
         time.sleep(1)
     else:
         print('Start')
+
+
+# IO:
+import io
+dummy_file = io.StringIO()
+print('Hello Geeks!!', file=dummy_file)
+dummy_file.getvalue()
+
+
+# Python 3.x program showing how to print data on a screen
+# One object is passed
+print("This work is great!!!")
+x = 5
+
+# Two objects are passed
+print("x =", x)
+
+print('G', 'F', 'G')
+# code for disabling the softspace feature
+print('G', 'F', 'G', sep='')
+
+# using end argument
+print("Python", end='@')
+print("Viknesh")
+
+# Python 3 code for printing
+# on the same line printing
+# geeks and geeksforgeeks
+# in the same line
+
+print("geeks", end =" ")
+print("geeksforgeeks")
+
+# array
+a = [1, 2, 3, 4]
+
+# printing a element in same
+# line
+for i in range(4):
+	print(a[i], end =" ")
