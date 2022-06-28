@@ -1,13 +1,30 @@
 # STATEMENTS, PRINT, INDENTATION, COMMENTS & VARIABLE DECLARATIONS:
 # \, (), [], {}, ;
-# 1. Declared using Continuation Character (\):
+
+# 1. Printing Hello world #############################################################################################
+
+print("Hello World")
+print("My name is Viknesh")
+
+
+# 2. "end" parameter - the output with a <space at end by default> ####################################################
+
+print("Welcome to", end = ' ')
+print("GeeksforGeeks", end = ' ')
+
+print("Python", end = '@')
+print("GeeksforGeeks")
+
+
+# 1. Declared using Continuation Character (\): #######################################################################
+
 s = 1 + 2 + 3 + \
     4 + 5 + 6 + \
     7 + 8 + 9
 print(s)
 
 
-# 2. Declared using parentheses () :
+# 2. Declared using parentheses () : ##################################################################################
 n = (1 * 2 * 3 + 7 + 8 + 9)
 print(n)
 
@@ -30,8 +47,7 @@ flag = 2; ropes = 3; pole = 4
 print(flag, ropes, pole)
 
 
-# 6. Printing Hello world
-print("Hello World")
+
 
 
 # 7. Indentation: (# 4 spaces are mandatory which acts like braces)
@@ -44,9 +60,7 @@ else:
 print('All set !')
 
 
-# 8. Comments
-# This is a comment Print “GeeksforGeeks !” to console
-print("GeeksforGeeks")
+
 
 a, b = 1, 3 # Declaring two integers
 sum = a + b # adding two integers

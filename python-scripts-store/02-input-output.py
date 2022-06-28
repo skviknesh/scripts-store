@@ -70,14 +70,6 @@ print(x, type(x), y, type(y))
 # 21 <class 'int'> 21 <class 'int'>
 
 
-# "end" parameter - the output with a <space at end by default>
-print("Welcome to", end = ' ')
-print("GeeksforGeeks", end = ' ')
-
-print("Python", end = '@')
-print("GeeksforGeeks")
-
-
 # Python program showing how to multiple input using split
 # Taking two inputs at a time
 x, y = input("Enter two values: ").split()
