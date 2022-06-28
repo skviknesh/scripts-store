@@ -1,22 +1,71 @@
-# STATEMENTS, PRINT, INDENTATION, COMMENTS & VARIABLE DECLARATIONS:
-# \, (), [], {}, ;
+# PRINT, VARIABLE DECLARATIONS & PRINT FORMATTING:
+# 1. OUTPUT:
+# Python Output functions
+# Syntax: print(value(s), sep= ‘ ‘, end = ‘\n’, file = file, flush = flush)
 
-# 1. Printing Hello world #############################################################################################
+# "print" function ####################################################################################################
 
 print("Hello World")
 print("My name is Viknesh")
 
 
-# 2. "end" parameter - the output with a <space at end by default> ####################################################
+# "end" parameter - the output with a <space at end by default> #######################################################
 
-print("Welcome to", end = ' ')
-print("GeeksforGeeks", end = ' ')
+print("Welcome to", end=' ')
+print("Python", end=' ')
 
-print("Python", end = '@')
-print("GeeksforGeeks")
+print("Python", end='@')
+print("is really awesome")
+
+print("It is great to learn programming in a structured way", end="**")
+print("Welcome to learning")
 
 
-# 1. Declared using Continuation Character (\): #######################################################################
+# "sep" parameter - separates the string in commas ####################################################################
+
+print('26', '03', '1992', sep='-')
+
+print('Red', 'Green', 'Blue', sep=',')
+
+print("Hello my name is Viknesh", sep=',')  # has no change
+print("Hello", "my", "name", "is", "Viknesh", sep=',')
+print("Hello", "my", "name", "is", "Viknesh", sep='-')
+
+print('I', 'am', sep='', end='')
+print('Viknesh')
+
+print('I', 'am', 'creating', sep=',', end='@')
+print('Python Scripts')
+
+
+# \n - for new line ###################################################################################################
+
+print("Python is very famous in all aspects")
+print("Python \n is very famous in all aspects.")
+
+print('26', '03', '1992', sep='-', end='\n')
+
+
+# 2. VARIABLE DECLARATIONS: ############################################################################################
+
+myNumber = 3
+print(myNumber)
+
+myNumber2 = 4.5
+print(myNumber2)
+
+myNumber = "helloworld"
+print(myNumber)
+
+num, num2, num7 = 1, 4, 5
+print(num, num2, num7)
+
+num = 5; num2 = 4; num7 = 7
+print(num, num2, num7)
+
+
+# \, (), [], {}, ;
+# Declared using Continuation Character (\): ##########################################################################
 
 s = 1 + 2 + 3 + \
     4 + 5 + 6 + \
@@ -24,80 +73,71 @@ s = 1 + 2 + 3 + \
 print(s)
 
 
-# 2. Declared using parentheses () : ##################################################################################
+# Declared using parentheses (): ##################################################################################
+
 n = (1 * 2 * 3 + 7 + 8 + 9)
 print(n)
 
 
-# 3. Declared using square brackets [] :
+# Declared using square brackets []: ##############################################################################
+
 footballer = ['MESSI',
               'NEYMAR',
               'SUAREZ']
 print(footballer)
 
 
-# 4. Declared using braces {} :
+# Declared using braces {}: #######################################################################################
+
 x = {1 + 2 + 3 + 4 + 5 + 6 +
      7 + 8 + 9}
 print(x)
 
 
-# 5. Declared using semicolons(;) :
+# Declared using semicolons(;): ####################################################################################
+
 flag = 2; ropes = 3; pole = 4
 print(flag, ropes, pole)
 
 
+# Printing objects ##################################################################################################
+
+x = 5
+print("x =", x)
+
+b = "Viknesh"
+print("Hello", b, "How are you")
+
+a, b = 1, 3  # Declaring two integers
+add = a + b  # adding two integers
+print(add)  # displaying the output
 
 
+# 3. PRINT FORMATTING: ################################################################################################
 
-# 7. Indentation: (# 4 spaces are mandatory which acts like braces)
-site = 'gfg'
+# \" \"
 
-if site == 'gfg':
-    print('Logging on to geeksforgeeks...') # 4 spaces is mandatory
-else:
-    print('retype the URL.')
-print('All set !')
+print("I \"love you")
+print("I \"love\" you")
 
 
+# using ".format()" method ###########################################################################################
 
+print("I love {} for your {}!".format('You', 'Kindness'))
 
-a, b = 1, 3 # Declaring two integers
-sum = a + b # adding two integers
-print(sum) # displaying the output
+# Referring a position of the object
+print('{0} and {1}'.format('Love', 'Kindness'))
+print('{1} and {0}'.format('Love', 'Kindness'))
 
+print("I love {0} for your \"{1}!\"".format('You', 'Kindness'))
 
-# 9. Multi line string as comments:
-"""
-This would be a multiline comment in Python that spans several lines and describes geeksforgeeks.
-A Computer Science portal for geeks. It contains well written, well thought
-and well-explained computer science and programming articles, quizzes and more.
-"""
-print("GeeksForGeeks")
+print("I prefer to have {0} with {1}, and {other}.".format('Tea', 'Sugar', other='Biscuits'))
 
-'''This article on geeksforgeeks gives you a perfect example of
-multi-line comments'''
-print("GeeksForGeeks")
+print("Runs :{0:2d}, Run rate :{1:8.2f}".format(12, 00.546))
 
+# "f-Strings", similar to ".format()" #################################################################################
 
-# 10. Usage of doc strings:
-def helloWorld():
-    """ This program prints out hello world """ #This is a docstring comment
-    print("Hello World")
+print(f"I love {'you'} for your {'Kindness'}!")
 
-helloWorld()
+print(f"I love {'you'} for your \"{'Kindness'}!\"")
 
-# 11. Variable declaration:
-myNumber = 3
-print(myNumber)
-
-myNumber2 = 4.5
-print(myNumber2)
-
-myNumber ="helloworld"
-print(myNumber)
-
-num, num2, num7 = 1, 4, 5
-print(num, num2, num7)
-num = 5; num2 = 4; num7 = 7
-print(num, num2, num7)

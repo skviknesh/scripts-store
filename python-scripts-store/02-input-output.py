@@ -123,24 +123,7 @@ x = [int(x) for x in input("Enter multiple value: ").split(",")]
 print("Number of list is: ", x)
 
 
-# OUTPUT:
-# Python Output functions
-# Syntax: print(value(s), sep= ‘ ‘, end = ‘\n’, file = file, flush = flush)
-print("GeeksforGeeks \n is best for DSA Content.")
 
-
-# This line will automatically add a new line before the next print statement
-print ("GeeksForGeeks is the best platform for DSA content")
-
-
-# This print() function ends with "**" as set in the end argument.
-print ("GeeksForGeeks is the best platform for DSA content", end= "**")
-print("Welcome to GFG")
-
-
-# Variable outputs:
-b = "Viknesh"
-print("Hello", b, "How are you")
 
 
 # Print 3>>2>>1>>Start:
@@ -171,30 +154,6 @@ print('Hello Geeks!!', file=dummy_file)
 dummy_file.getvalue()
 
 
-# Python 3.x program showing how to print data on a screen
-# One object is passed
-print("This work is great!!!")
-x = 5
-
-# Two objects are passed
-print("x =", x)
-
-print('G', 'F', 'G')
-# code for disabling the softspace feature
-print('G', 'F', 'G', sep='')
-
-# using end argument
-print("Python", end='@')
-print("Viknesh")
-
-# Python 3 code for printing
-# on the same line printing
-# geeks and geeksforgeeks
-# in the same line
-
-print("geeks", end =" ")
-print("geeksforgeeks")
-
 # array
 a = [1, 2, 3, 4]
 
@@ -202,3 +161,32 @@ a = [1, 2, 3, 4]
 # line
 for i in range(4):
 	print(a[i], end =" ")
+
+# 9. Multi line string as comments:
+"""
+This would be a multiline comment in Python that spans several lines and describes geeksforgeeks.
+A Computer Science portal for geeks. It contains well written, well thought
+and well-explained computer science and programming articles, quizzes and more.
+"""
+print("GeeksForGeeks")
+
+'''This article on geeksforgeeks gives you a perfect example of
+multi-line comments'''
+print("GeeksForGeeks")
+
+
+# 10. Usage of doc strings:
+def helloWorld():
+    """ This program prints out hello world """ #This is a docstring comment
+    print("Hello World")
+
+helloWorld()
+
+# 7. Indentation: (# 4 spaces are mandatory which acts like braces)
+site = 'gfg'
+
+if site == 'gfg':
+    print('Logging on to geeksforgeeks...') # 4 spaces is mandatory
+else:
+    print('retype the URL.')
+print('All set !')
