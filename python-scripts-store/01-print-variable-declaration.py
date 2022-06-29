@@ -141,3 +141,18 @@ print(f"I love {'you'} for your {'Kindness'}!")
 
 print(f"I love {'you'} for your \"{'Kindness'}!\"")
 
+
+# STRING FORMATTING ###################################################################################################
+# d, i, u - Decimal integer;               x, X - Hexadecimal integer;         o - Octal integer;
+# f, F - Floating-point;                   e, E - E notation;                  g, G - Floating-point or E notation;
+# c - Single character;                    s, r, a - String;                   % - Single '%' character
+
+print("Hello, my name is %s." % "Viknesh")
+
+print("%d %s cost $%.2f" % (6, "bananas", 1.74))   # Multiple values enclosed in a tuple.
+
+"%d, %i, %u" % (42, 42, 42)
+
+"%5s" % "foo"
+
+"%3d" % 4

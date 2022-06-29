@@ -1,10 +1,122 @@
-# Functions 01: ######################################################################################################
+# FUNCTIONS & GENERATORS:
+# SYNTAX 1:
+# def function_name(parameters):
+#     """docstring"""
+#     <body of the function>
+#     return expression
+
+# Example for syntax 1:
+# def <function_name>([<parameters>]):
+#     <statement(s)>
+
+# SYNTAX 2:
+# def function_name(parameter: data_type) -> return_type:
+#     """Docstring"""
+#     <body of the function>
+#     return expression
+
+# Simple function 1: ##################################################################################################
+
 def hello():
     print("hello")
     print("hello again")
 
-# calling function
-hello()
+
+hello()  # calling the hello() function
+
+
+# Simple function 2: ##################################################################################################
+def f():
+    s = '-- Inside f()'
+    print(s)
+
+
+print('Before calling f()')
+f()
+print('After calling f()')
+
+
+# Empty function: ####################################################################################################
+def f():
+    pass
+
+
+f()
+
+
+# Positional Arguments: ###############################################################################################
+def f(qty, item, price):
+    print(f'{qty} {item} cost ${price:.2f}')
+
+
+f(6, 'bananas', 1.74)
+f('bananas', 6, 1.74)  # Positions will get changed
+
+
+# Keyword Arguments: ###############################################################################################
+# Using keyword arguments lifts the restriction on argument order, so you can specify them in any order.
+
+def f(qty, item, price):
+    print(f'{qty} {item} cost ${price:.2f}')
+
+
+f(qty=6, item='bananas', price=1.74)
+f(item='bananas', qty=6, price=1.74)  # Keyword arguments won't get changed
+f(price=1.74, qty=6, item='bananas')  # Keyword arguments won't get changed
+
+
+# Default Parameters: ###############################################################################################
+# If a parameter specified in a Python function definition has the form <name>=<value>,
+# then <value> becomes a default value for that parameter
+
+def f(qty=6, item='bananas', price=1.74):  # qty=6, item=bananas, price=1.74 will be default values
+    print(f'{qty} {item} cost ${price:.2f}')
+
+
+f(4, 'apples', 2.24)  # Parameter values are overwritten with what we passed.
+f(4, 'apples')        # Parameter values are overwritten only for 4 & apples.
+f(4)                  # Parameter values are overwritten for 4.
+f()                   # Default parameters are taken
+f(item='kumquats', qty=9)  # Default parameters are overwritten here for item & qty.
+f(price=2.29)              # Default parameters are overwritten only for price.
+
+
+# Mutable default value parameters: ###################################################################################
+
+def f(my_list=[]):
+    my_list.append('###')
+    return my_list
+
+
+f([1, 2, 3, 4, 5])
+
+f()
+f()
+f()
+# Oops! You might have expected each subsequent call to also return the singleton list ['###'],
+# just like the first. Instead, the return value keeps growing. What happened?
+
+# In Python, default parameter values are defined only once when the function is defined
+# (that is, when the def statement is executed).
+# The default value isn’t re-defined each time the function is called.
+# Thus, each time you call f() without a parameter, you’re performing .append() on the same list.
+
+
+# To understand this better, we can check this with object id (address) with id() function: ###########################
+def f(my_list=[]):
+    print(id(my_list))
+    my_list.append('###')
+    return my_list
+
+
+f([1, 2, 3, 4, 5])
+
+f()
+f()
+f()
+# The object identifier displayed confirms that, when my_list is allowed to default,
+# the value is the same object with each call.
+
 
 # Functions 02: Return keyword ########################################################################################
 def fun():
@@ -12,7 +124,10 @@ def fun():
     for i in range(10):
         s += i
     return s
+
+
 print(fun())
+
 
 # Generators - Yield Keyword ###########################################################################################
 # Example 1:

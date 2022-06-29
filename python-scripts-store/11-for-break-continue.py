@@ -111,10 +111,10 @@ for i in range(len(l)):
 
 # performing sum of first 10 numbers ##################################################################################
 
-sum = 0
+add = 0
 for i in range(1, 10):
-    sum = sum + i
-print("Sum of first 10 numbers :", sum)
+    add = add + i
+print("Sum of first 10 numbers :", add)
 
 
 # Python program to demonstrate for-else loop #########################################################################
